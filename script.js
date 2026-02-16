@@ -13,27 +13,42 @@ addBtn.addEventListener("click", function () {
 
     // Create List Item
     const li = document.createElement("li");
-    li.textContent = taskText;
+
+    li.innerHTML = `
+    <span class="task-text">${taskText}</span>
+        <button>Delete</button>`;
     todoList.appendChild(li);
 
-    // Create Delete Button
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-
-    li.appendChild(deleteBtn);
-
-    deleteBtn.addEventListener("click", function () {
-        todoList.removeChild(li);
-    })
-
-    li.addEventListener("click", function (e) {
-
-        if (e.target.tagName === "BUTTON") {
-            return;
-        }
-
-        li.classList.toggle("completed");
-    });
-
     input.value = "";
+    saveData();
 });
+
+todoList.addEventListener("click", function (e) {
+    if (e.target.tagName === "BUTTON") {
+        const li = e.target.closest("li");
+        // e.target.parentElement.remove();
+        li.remove();
+        saveData();
+        return;
+    }
+
+    const li = e.target.closest("li");
+    if (li) {
+        li.classList.toggle("completed");
+        saveData();
+    }
+
+    // if (e.target.tagName === "LI") {
+    //     e.target.classList.toggle("completed");
+    //     saveData();
+    // }
+});
+
+function saveData() {
+    localStorage.setItem("data", todoList.innerHTML);
+}
+
+function showData() {
+    todoList.innerHTML = localStorage.getItem("data");
+}
+showData();

@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 380px;
-    min-height: 500px;
+    min-height: auto;
     background-color: #ffffff;
     padding: 25px;
     border-radius: 18px;
@@ -90,7 +90,7 @@ h1 {
     background-color: #e6e6e6;
 }
 
-.completed {
+.completed .task-text {
     text-decoration: line-through;
     opacity: 0.6;
 }
