@@ -89,3 +89,8 @@ h1 {
 #todo-list li:hover {
     background-color: #e6e6e6;
 }
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
