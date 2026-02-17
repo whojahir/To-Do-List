@@ -1,19 +1,19 @@
 #  📝 Todo List Web App
 
-A clean and modern Todo List application built using HTML, CSS, and Vanilla JavaScript.
-
-This project demonstrates DOM manipulation, event delegation, and localStorage for persistent data storage.
+A simple and responsive Todo List Web Application built using HTML, CSS, and Vanilla JavaScript.
+This app allows users to add, complete, delete, and persist tasks using Local Storage.
 
 # 🚀 Live Features
 
-✅ Add new tasks
+➕ Add new tasks
 <br>
-✅ Delete tasks
+🗑 Delete tasks
 <br>
-✅ Mark tasks as completed
+💾 Data saved in browser using Local Storage
 <br>
-✅ Data persists after page refresh
+🎨 Clean and modern UI
 <br>
-✅ Modern gradient UI
-<br>
-✅ Event Delegation (optimized event handling)
+📱 Responsive centered layout
+
+# 🛠 Technologies Used
+
