@@ -75,8 +75,8 @@ Todo-App/
  <li> On page reload:
   <br>
   showData();
-   <br>
-   <li> Previously saved tasks are restored automatically.
+  <br>
+  <li> Previously saved tasks are restored automatically.
 
 # ▶️ How to Run
 
